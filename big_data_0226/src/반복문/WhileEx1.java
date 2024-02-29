@@ -60,13 +60,16 @@ public class WhileEx1 {
         int n = sc.nextInt();
         int i =1;
         while(i<=(n*n)){
-            if(i<10) {
+            // printf 형식쓰면 더 깔끔하게 가능함.
+            /*if(i<10) {
                 System.out.print("   " + i);
             }else if(i<100){
                 System.out.print("  "+i);
             }else{
                 System.out.print(" "+i);
-            }
+            }*/
+
+            System.out.printf("%4d",i);
             if(i%n==0){
                 System.out.println(" ");
             }
@@ -82,7 +85,7 @@ public class WhileEx1 {
             try {
                 if(start==1) sc.nextLine();
                 int n = sc.nextInt();
-                if (n == 1) System.out.println("소수 아님");
+                if (n == 1 || n == 0) System.out.println("소수 아님");
                 else {
                     boolean ok = false;
                     for (int i = 2; i < n; i++) {
