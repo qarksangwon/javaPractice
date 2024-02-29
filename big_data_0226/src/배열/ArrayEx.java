@@ -19,9 +19,13 @@ public class ArrayEx {
         System.out.println();
 
 
-        String[] weeks = {"월","화","수","목","금","토","일"};
-        for (String e : weeks){
-            System.out.print(e+ " ");
+        int[][] arr2 = {{1,2,3},{4,5,6}};
+        int[][] arr3 = new int[2][3]; //2차원에선 arr[0]도 주소값.
+        for(int z =0; z<arr2.length; z++){ // 행에 관한 for
+            for(int j=0; j<arr2[i].length; j++){ //열에 관한 for
+                System.out.print(arr2[z][j]);
+            }
+            System.out.println();
         }
 
     }
