@@ -5,19 +5,14 @@ import java.util.Scanner;
 public class WhileEx1 {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        WhileEx1.ex6();
+        ex7();
     }
 
     public static void ex1(){
         int n = sc.nextInt();
         for(int i=n; i>=0; i--){
-            for(int j=0;j<i;j++){
-                System.out.print(" ");
-            }
-            for(int j=n; j>=i; j--){
-                System.out.print("*");
-            }
-            System.out.println();
+            System.out.println("a5");
+            System.out.println(i);
         }
     }
 
@@ -80,6 +75,7 @@ public class WhileEx1 {
 
     public static void ex6(){
         //입력 받은 수가 소수인지 아닌지 판별(소수 - 약수가 1과 자기자신인것)
+        // + 10 미만의 소수의 합을 출력
         int start = 0;
         while(true) {
             try {
@@ -89,7 +85,10 @@ public class WhileEx1 {
                 else {
                     boolean ok = false;
                     for (int i = 2; i < n; i++) {
-                        if (n % i == 0) ok = true;
+                        if (n % i == 0) {
+                            ok = true;
+                            break;
+                        }
                     }
                     if (ok) System.out.println("소수 아님");
                     else System.out.println("소수");
@@ -100,5 +99,29 @@ public class WhileEx1 {
                 if(start==0) start++;
             }
         }
+    }
+
+    public static void ex7(){
+        //소수 심화 예제
+        // 입력한 숫자가 소수인지 아닌지 구하고
+        // 입력한 숫자포함 모든 소수를 찾아 합을 구하기
+        System.out.print("정수 입력:");
+        int num = sc.nextInt();
+        int sum = 0;
+        for (int i=2; i<num; i++){
+            if(primeFunc(i)) sum+=i;
+        }
+        String str = primeFunc(num)? "입력하신 숫자 '" +num+"'은 소수입니다.":"입력하신 숫자 '" +num+"'은 소수가 아닙니다.";
+        str += "\n"+num+"미만의 소수의 합은 " + sum +"입니다.";
+        System.out.println(str);
+
+    }
+    public static boolean primeFunc(int n){
+        boolean isPrime = true;
+        if(n<2) isPrime = false;
+        for(int i =2; i<n; i++){
+            if(n%i ==0) isPrime = false;
+        }
+        return isPrime;
     }
 }
