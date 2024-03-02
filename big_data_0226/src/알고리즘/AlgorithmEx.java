@@ -2,7 +2,7 @@ package 알고리즘;
 
 public class AlgorithmEx {
     public static void main(String[] args) {
-        System.out.println(fibonacci(5));
+        System.out.println(euclidean(30,18));
 
     }
 
@@ -12,6 +12,7 @@ public class AlgorithmEx {
     //등비 수열 : f(n) = f(n-1) * a
     //factorial : f(n) = f(n-1)*n  >> n보다 작거나 같은 모든 양의 정수의 곱.
     //fibonacci : f(n) = f(n-1)+f(n-2) >> 0항을 0, 1항을 1로 두고, 둘째 번 항부터 그 뒤의 모든 항이 바로 앞 두 항의 덧셈.
+
     public static int factorial(int n){
         if(n == 1){
             return 1;
@@ -37,4 +38,14 @@ public class AlgorithmEx {
     }
 
 
+
+    //Euclidean algorithm (유클리드 호제법) : 2개의 자연 수의 최대 공약 수를 구하는 algorithm
+    public static int euclidean(int x, int y){
+        if(y==0){
+            return x;
+        }
+        else{
+            return euclidean(y,x%y);
+        }
+    }
 }
