@@ -59,5 +59,10 @@ public class StringEx {
         // 10. 문자 열을 문자 배열로 (toCharArray)
         char[] word = strf.toCharArray();
         System.out.println(word.length);
+
+        // 11. 문자열 전체 대문자/ 소문자 변경
+        String strr = "Hello Java";
+        System.out.println(strr.toUpperCase());
+        System.out.println(strr.toLowerCase());
     }
 }
