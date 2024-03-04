@@ -28,6 +28,12 @@ class Student{
     private int grade;
     private String address;
 
+    //아무것도 안쓰면 접근제한자는 default
+    // public = 어디서나
+    // protected = 같은 패키지 || 상속(부모 자식간)
+    // default = 같은 패키지까지 가능
+    // private = 같은 클래스에서만
+
     Student(){
 
     }
