@@ -15,10 +15,10 @@ public class PcRoom {
         boolean[] seat = new boolean[100];
         for(int i=0; i<total; i++){
             int wantSeat = sc.nextInt();
-            if(seat[wantSeat]){
+            if(seat[wantSeat-1]){
                 count++;
             }else{
-                seat[wantSeat] = true;
+                seat[wantSeat-1] = true;
             }
         }
         System.out.println(count);
