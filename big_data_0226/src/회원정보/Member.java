@@ -11,10 +11,10 @@ import java.util.Scanner;
 //gender : 성 정체성 (F,M,G,R)
 //sex : 생물학적 성 (F,M) 변수명 정할 때 팁!
 public class Member {
-    String name;
-    int age;
-    String gender;
-    String job;
+    private String name;
+    private int age;
+    private String gender;
+    private String job;
     Scanner sc = new Scanner(System.in);
 
 
