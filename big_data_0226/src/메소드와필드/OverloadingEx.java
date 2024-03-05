@@ -13,7 +13,8 @@ public class OverloadingEx {
         System.out.printf("%s\n", sum("Korea", "Seoul", "Gang-nam"));
         System.out.printf("%d\n", sum(10, "100", 50));
 
-        // char 문자 타입은 아스키 코드 번호로 int 타입과 같이 연산할 수 있다.
+        // char 문자 타입은 컴퓨터 내부에 저장될 때 정수로 치환돼 저장된다. (ASCII)
+        // 그렇기 때문에 정수형 타입인 int 와 연산이 가능한 것.
         System.out.printf("%d\n", sum(10, 'A', 'B'));
     }
 
