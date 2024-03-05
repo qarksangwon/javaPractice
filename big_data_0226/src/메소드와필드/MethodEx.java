@@ -1,4 +1,5 @@
 package 메소드와필드;
+//메소드 = 클래스 내부에 선언된 함수 (클래스 밖이면 함수)
 
 public class MethodEx {
     public static void main(String[] args) {
