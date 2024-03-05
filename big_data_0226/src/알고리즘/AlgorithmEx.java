@@ -2,12 +2,13 @@ package 알고리즘;
 
 public class AlgorithmEx {
     public static void main(String[] args) {
-        System.out.println(euclidean(30,18));
-
+        System.out.println(funcRecursive(10));
     }
 
     //재귀 함수
-    //조건이 달성할 때 까지 자신(함수)를 다시 호출 하는 Algorithm.
+    //조건이 달성할 때 까지 자신(함수)를 다시 호출 하는 알고리즘
+    //길찾기 알고리즘이나 퀵정렬 등등에서 사용된다.
+
     //등차 수열 : f(n) = f(n-1) + a
     //등비 수열 : f(n) = f(n-1) * a
     //factorial : f(n) = f(n-1)*n  >> n보다 작거나 같은 모든 양의 정수의 곱.
@@ -39,7 +40,7 @@ public class AlgorithmEx {
 
 
 
-    //Euclidean algorithm (유클리드 호제법) : 2개의 자연 수의 최대 공약 수를 구하는 algorithm
+    //Euclidean algorithm (유클리드 호제법) : 2개의 자연 수의 최대 공약 수를 구하는 알고리즘
     public static int euclidean(int x, int y){
         if(y==0){
             return x;
@@ -47,5 +48,10 @@ public class AlgorithmEx {
         else{
             return euclidean(y,x%y);
         }
+    }
+
+    public static int funcRecursive(int n){
+        if(n==1)return 1;
+        return n+funcRecursive(n-1);
     }
 }
