@@ -19,20 +19,27 @@ package 문제풀이;
 // 15
 // 14
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class NumberBoard {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String outStr = "";
+        //String outStr = "";
+        List<Integer> rst = new ArrayList<>();
         while(true){
             int length = 1;
             String value = sc.nextLine();
             if(value.equals("0")) break;
             length += numLen(value);
-            outStr += length +"\n";
+         //   outStr += length +"\n";
+            rst.add(length);
         }
-        System.out.println(outStr);
+        //System.out.println(outStr);
+        for(int e : rst){
+            System.out.println(e);
+        }
     }
 
     public static int numLen(String num){
