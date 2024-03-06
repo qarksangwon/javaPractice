@@ -4,8 +4,11 @@ package 상속종합;
 public class InheritanceTV {
     public static void main(String[] args) {
         TV tv1 = new TV();
+        tv1.setPower(true);
         tv1.viewTV();
         tv1.setChannel(200, true);
+        tv1.viewTV();
+        tv1.setChannel(200, false);
         tv1.viewTV();
     }
 }
@@ -42,7 +45,6 @@ class TV extends PrototypeTV{
     public void setChannel(int cnl, boolean isInternet){
         if(isInternet){
             System.out.println("인터넷 모드 입니다.");
-            System.out.println();
             this.isInternet = true;
         }else{
             this.isInternet = false;
@@ -51,14 +53,17 @@ class TV extends PrototypeTV{
                 System.out.println("채널이 "+cnl+"번으로 변경됐습니다.");
             }else System.out.println("채널 설정 범위를 벗어났습니다.");
         }
+        System.out.println();
     }
 
     void viewTV(){
+        String powerState = isPower ? "ON" : "OFF";
+        String internetState = isInternet ? "ON" : "OFF";
         System.out.println("이름 : " + name);
-        System.out.println("전원 : " + isPower);
+        System.out.println("전원 : " + powerState);
         System.out.println("채널 : " + channel);
         System.out.println("볼륨 : " + volume);
-        System.out.println("인터넷 모드 : " + isInternet);
+        System.out.println("인터넷 모드 : " + internetState);
         System.out.println();
     }
 }
