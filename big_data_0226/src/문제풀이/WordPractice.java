@@ -3,8 +3,7 @@ package 문제풀이;
 // 대, 소문자 구별하지 않음.
 // 여러개 존재하는 경우 ? 출력.
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class WordPractice {
