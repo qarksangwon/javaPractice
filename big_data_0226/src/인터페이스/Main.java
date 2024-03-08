@@ -9,7 +9,9 @@ public class Main {
             if(ani instanceof Dog){
                 ani.sound();
                 ((Dog)ani).yum();
+                System.out.println("강아지는 너무 " + ani.type);
             }
+            else if(ani instanceof  Cat) System.out.println("고양이도 " + ani.type);
         }
 
 
