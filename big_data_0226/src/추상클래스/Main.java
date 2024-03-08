@@ -10,6 +10,15 @@ public class Main {
         sp.setPower(true);
         sp.call();
         sp.internet();
+
+        Phone pttp = new Phone("iPhone") {
+            @Override
+            void call() {
+                System.out.println("아이폰 통화");
+            }
+        };
+        System.out.println(pttp.name);
+        pttp.call();
     }
 }
 
