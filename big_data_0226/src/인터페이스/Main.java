@@ -6,7 +6,10 @@ public class Main {
                 ,new Cat("고영희"),new Dog("말티푸")
                 , new Cat("김영희"),new Cow("워낭소리"), new Cow("황소")};
         for(Animal ani : animals){
-            if(ani instanceof Cat) ani.sound();
+            if(ani instanceof Dog){
+                ani.sound();
+                ((Dog)ani).yum();
+            }
         }
 
 
@@ -22,6 +25,10 @@ class Dog implements Animal{
     @Override
     public void sound(){
         System.out.println(name + " 멍멍");
+    }
+
+    public void yum(){
+        System.out.println(name + "(이)가 밥먹고 기분이 좋아보인다!");
     }
 }
 
