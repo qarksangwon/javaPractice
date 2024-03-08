@@ -2,7 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //변경점입니다.
-        //커밋테스트 3.
+        Scanner sc = new Scanner(System.in);
+//        System.out.print("이동 지역 선택 [1]부산 [2]대전 [3]강릉 [4]광주 : ");
+//        int endPoint = sc.nextInt();
+//        System.out.print("이동할 승객 수 입력: ");
+//        int people = sc.nextInt();
+        System.out.print("이동할 차량 선택 [1]스포츠카 [2]승용차 [3]버스 : ");
+        int choice = sc.nextInt();
+        System.out.print("부가기능 [1]ON [2]OFF");
+        int function = sc.nextInt();
+
+
     }
 }
