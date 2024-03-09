@@ -1,5 +1,10 @@
 package 자동차만들기;
 
+// 자동차 추상 클래스 작성
+// 상속 받아 스포츠 카, 승용차, 버스에 대한 초기값 설정과
+// 조건에 맞게 생성자 사용해 차 이름 생성
+// 또한 각 부가 기능에 대해 처리할 메소드 구성
+
 public abstract class CarForm {
 
     int speed;
@@ -8,6 +13,8 @@ public abstract class CarForm {
     int seat;
     String carName;
     boolean function = false;
+
+    abstract void onOff(boolean carFunction);
 }
 
 class SportCar extends CarForm{
@@ -19,8 +26,8 @@ class SportCar extends CarForm{
         this.seat = 2;
         this.carName = carname;
     }
-    public void onOff(boolean Carfunction){
-        if(Carfunction){
+    public void onOff(boolean carFunction){
+        if(carFunction){
             function = true;
             speed += 50;
         }else{
@@ -42,8 +49,8 @@ class Car extends CarForm {
         this.carName = carname;
     }
 
-    public void onOff(boolean Carfunction) {
-        if (Carfunction) {
+    public void onOff(boolean carFunction) {
+        if (carFunction) {
             function = true;
             seat += 1;
         } else {
@@ -62,8 +69,8 @@ class Bus extends CarForm {
         this.seat = 20;
         this.carName = carname;
     }
-    public void onOff(boolean Carfunction){
-        if(Carfunction){
+    public void onOff(boolean carFunction){
+        if(carFunction){
             function = true;
             fuelBox+=30;
         }else{
@@ -74,6 +81,3 @@ class Bus extends CarForm {
         }
       }
    }
-class seatBox extends CarForm{
-
-}
