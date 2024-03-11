@@ -19,6 +19,7 @@ public class DefaultMethodEx {
 
         //익명 객체
         RemoteControl ps = new RemoteControl() {
+            int vol;
             @Override
             public void turnON() {
                 System.out.println("PS5 실행");
@@ -31,13 +32,14 @@ public class DefaultMethodEx {
 
             @Override
             public void setVolume(int volume) {
-                System.out.println("소리 : "+volume);
+                vol = volume;
+                System.out.println("소리 : "+vol);
             }
         };
         ps.turnON();
-        ps.turnOFF();
         ps.setVolume(20);
         ps.setMute(true);
+        ps.turnOFF();
     }
 }
 
