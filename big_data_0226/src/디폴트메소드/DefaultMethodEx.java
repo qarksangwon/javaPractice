@@ -17,7 +17,27 @@ public class DefaultMethodEx {
         rc.setMute(true);
         RemoteControl.changeBattery();
 
+        //익명 객체
+        RemoteControl ps = new RemoteControl() {
+            @Override
+            public void turnON() {
+                System.out.println("PS5 실행");
+            }
 
+            @Override
+            public void turnOFF() {
+                System.out.println("PS5 종료");
+            }
+
+            @Override
+            public void setVolume(int volume) {
+                System.out.println("소리 : "+volume);
+            }
+        };
+        ps.turnON();
+        ps.turnOFF();
+        ps.setVolume(20);
+        ps.setMute(true);
     }
 }
 
