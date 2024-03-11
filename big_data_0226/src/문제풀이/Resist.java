@@ -19,15 +19,13 @@ public class Resist {
         Scanner sc = new Scanner(System.in);
         String[] str = {"black","brown","red","orange","yellow","green",
         "blue","violet","grey","white"};
-        String[] val = {"","0","00","000","0000","00000","000000"
-                ,"0000000","00000000","000000000"};
         String rst = "";
         for(int j = 0; j < 3; j ++) {
             String input = sc.nextLine();
             for (int i = 0; i < str.length; i++) {
                 if (input.equals(str[i])){
                     if(j<2) rst+=Integer.toString(i);
-                    else rst+=val[i];
+                    else rst+="0".repeat(i);
                 }
             }
         }
