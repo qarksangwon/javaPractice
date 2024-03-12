@@ -19,22 +19,24 @@ package 문제풀이;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class OverAverage {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StringBuffer rst = new StringBuffer();
         int tCnt = sc.nextInt();
+        List<Double> rst = new ArrayList<Double>();
         for(int i=0; i<tCnt; i++){
             int current = sc.nextInt();
             int[] currents = new int[current];
             for(int j=0; j<current; j++){
                 currents[j] = sc.nextInt();
             }
-            rst.append(ratio(current,currents)+"% \n");
+            rst.add(ratio(current,currents));
         }
-        System.out.println(rst);
+        for(double d : rst) System.out.printf("%.3f%% \n",d);
     }
 
     static double ratio(int stdCnt, int[] score){
