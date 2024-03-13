@@ -27,7 +27,7 @@ public class OverAverage {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int tCnt = sc.nextInt();
-        List<Double> rst = new ArrayList<Double>();
+        List<Double> rst = new ArrayList<>();
         for(int i=0; i<tCnt; i++){
             int current = sc.nextInt();
             int[] currents = new int[current];
