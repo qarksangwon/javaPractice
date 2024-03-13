@@ -1,4 +1,4 @@
-package ObjectClass;
+package objectClass;
 // Object = java.lang 패키지 중 가장 많이 사용
 // => 모든 자바 클래스의 조상 클래스
 

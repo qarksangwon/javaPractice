@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 // 일반 배열을 ArrayList로 반환
 
 import java.util.Arrays;

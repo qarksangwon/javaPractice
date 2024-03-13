@@ -1,4 +1,4 @@
-package SystemClass;
+package systemClass;
 import java.lang.Thread;
 
 public class Main extends Thread {

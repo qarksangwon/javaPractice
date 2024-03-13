@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 // java.util , java.lang 엔 많은 유틸리티 클래스가 다수 있음
 // 그 중 하나가 java.util.Arrays
 

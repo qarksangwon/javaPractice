@@ -1,6 +1,5 @@
-package Arrays;
+package arrays;
 // 과일 길이순으로 정렬 이후 길이 같다면 사전 순으로 정렬
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 

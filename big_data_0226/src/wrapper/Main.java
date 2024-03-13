@@ -1,4 +1,4 @@
-package Wrapper;
+package wrapper;
 //기본 타입    래퍼 클래스
 //byte          Byte
 //short         Short

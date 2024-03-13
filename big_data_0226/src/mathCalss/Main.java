@@ -1,4 +1,4 @@
-package MathClass;
+package mathCalss;
 
 import java.util.Random;
 
