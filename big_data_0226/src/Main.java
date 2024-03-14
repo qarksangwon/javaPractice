@@ -7,11 +7,21 @@ public class Main {
 //        int endPoint = sc.nextInt();
 //        System.out.print("이동할 승객 수 입력: ");
 //        int people = sc.nextInt();
-        System.out.print("이동할 차량 선택 [1]스포츠카 [2]승용차 [3]버스 : ");
-        int choice = sc.nextInt();
-        System.out.print("부가기능 [1]ON [2]OFF");
-        int function = sc.nextInt();
+//        System.out.print("이동할 차량 선택 [1]스포츠카 [2]승용차 [3]버스 : ");
+//        int choice = sc.nextInt();
+//        System.out.print("부가기능 [1]ON [2]OFF");
+//        int function = sc.nextInt();
 
+        Tt t1 = new Tt("123");
+        Tt t2 = new Tt("123");
+        System.out.println(t1.equals(t2));
+        System.out.println(t1 == t2);
+    }
+}
 
+class Tt {
+    String name;
+    public Tt (String name) {
+        this.name = name;
     }
 }
