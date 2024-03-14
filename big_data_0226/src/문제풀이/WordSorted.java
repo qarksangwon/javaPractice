@@ -29,7 +29,19 @@ public class WordSorted {
         // set 의 내용을 구현하고 이를 반환하는 뜻
         String[] sortArr = str.toArray(new String[0]);
 
-        Comparator<String> comp = new Comparator<String>() {
+//        Comparator<String> comp = new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                if(o1.length()>o2.length()) return 1;
+//                else if(o1.length()<o2.length()) return -1;
+//                else{
+//                    return o1.compareTo(o2);
+//                }
+//            }
+//        };
+
+// 최적화
+        Arrays.sort(sortArr,new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 if(o1.length()>o2.length()) return 1;
@@ -38,9 +50,7 @@ public class WordSorted {
                     return o1.compareTo(o2);
                 }
             }
-        };
-
-        Arrays.sort(sortArr,comp);
+        });
         for(String rst : sortArr) System.out.println(rst);
     }
 }
