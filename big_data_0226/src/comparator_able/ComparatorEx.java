@@ -11,6 +11,7 @@ public class ComparatorEx {
         treeSet.add(new Fruit("포도", 3000));
         treeSet.add(new Fruit("수박", 10000));
         treeSet.add(new Fruit("딸기", 6000));
+        treeSet.add(new Fruit("망고",3000));
         for(Fruit f : treeSet) System.out.println(f.name + " : " + f.price);
     }
 }
@@ -31,6 +32,8 @@ class DescendingComparator implements Comparator<Fruit>{
     public int compare(Fruit o1, Fruit o2) {
         if(o1.price > o2.price) return -1;
         else if(o1.price<o2.price) return 1;
-        else return 0;
+        else {
+            return o1.name.compareTo(o2.name);
+        }
     }
 }
