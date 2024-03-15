@@ -17,12 +17,14 @@ public class ThreadEx1 {
         Thread subThread3 = new Thread(task);
         subThread3.start(); // 인터페이스 상속은 이렇게 매개변수로 넘겨서 Thread 객체 생성해야함
 
-        Runnable task2 = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("익명 객체로 클래스 없이 바로 만듬!");
-            }
-        };
+//        Runnable task2 = new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("익명 객체로 클래스 없이 바로 만듬!");
+//            }
+//        };
+//         람다식은 이렇게        
+        Runnable task2 = () -> System.out.println("익명 객체로 클래스 없이 바로 만듬!");
 
         Thread subThread4 = new Thread(task2);
         subThread4.start();
