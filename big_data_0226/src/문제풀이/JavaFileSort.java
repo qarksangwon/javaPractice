@@ -2,19 +2,14 @@ package 문제풀이;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.TreeSet;
 
 public class JavaFileSort {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TreeSet<StudentScore> sortStd = new TreeSet<>();
-        FileInputStream inputStream = null;
-
-        try{
-            inputStream = new FileInputStream("src/문제풀이/score.txt");
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
+        FileInputStream inputStream = new FileInputStream("src/문제풀이/score.txt");
         Scanner sc = new Scanner(inputStream);
         while(sc.hasNext()){
             String[] strInfo = sc.nextLine().split(" ");
@@ -25,9 +20,8 @@ public class JavaFileSort {
             sortStd.add(new StudentScore(strInfo[0],avg,total));
         }
         int i = 1;
-        for(StudentScore s : sortStd){
-            System.out.printf("%d등 %s %d %.2f\n",i++,s.name,s.total,s.average);
-        }
+        for(StudentScore s : sortStd) System.out.printf("%d등 %s %d %.2f\n",i++,s.name,s.total,s.average);
+
 
     }
 }
