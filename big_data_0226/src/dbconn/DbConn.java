@@ -9,7 +9,7 @@ public class DbConn {
         ResultSet rs = null;
         try{
             // 오라클 드라이버 사용
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+//            Class.forName("oracle.jdbc.driver.OracleDriver");
             // 자기 주소의 db user 와 비밀번호로 접근
             conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SCOTT","1234");
 
@@ -35,8 +35,8 @@ public class DbConn {
                 System.out.println(empNo + ", " + empName + ", " + job + ", " + mgr + ", " + hireDate + ", " + sal + ", " + comm
                         + ", " + deptNo);
             }
-        }catch (ClassNotFoundException e){
-            e.printStackTrace();
+//        }catch (ClassNotFoundException e){
+//            e.printStackTrace();
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
